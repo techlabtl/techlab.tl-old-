@@ -7,6 +7,8 @@ function add_custom_post_types() {
    */
 
   // new_post_type("portfolio_work", array('title', 'editor'));
+
+  new_post_type('faq', array('title', 'editor'));
 }
 
 function add_custom_taxonomies() {
