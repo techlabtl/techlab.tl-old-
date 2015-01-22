@@ -6,5 +6,6 @@
       %header.site-header= render_partial("layouts/header")
       %section.site-content= wl_yield()
       %footer.site-footer= render_partial("layouts/footer")
+      - faq_form()
     // jQuery and application.js is loaded by default with wp_footer() function. See config/initializers/default_hooks.php for details
     - wp_footer()
