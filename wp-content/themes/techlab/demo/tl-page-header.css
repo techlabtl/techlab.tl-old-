@@ -1,0 +1,14 @@
+.tl-page-header {
+  text-align: center;
+  color: #050505;
+  text-transform: uppercase;
+  margin: 1em 0;
+}
+  .tl-page-header .tl-page-logo {
+    width: 5em;
+  }
+  .tl-page-header .tl-page-brand {
+    font-size: 1.1em;
+    letter-spacing: 7px;
+    margin-top: .5em;
+  }

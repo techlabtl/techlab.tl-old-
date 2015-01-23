@@ -13,4 +13,4 @@ wp-content/uploads/
 wp-content/wp-cache-config.php
 .sass-cache
 *.sql
-wp-content/themes/techlab/tmp/
+wp-content/themes/techlab/tmp/*

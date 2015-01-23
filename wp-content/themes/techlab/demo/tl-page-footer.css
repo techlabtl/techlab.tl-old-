@@ -1,0 +1,10 @@
+.tl-page-footer {
+  font-size: 1.1em;
+  text-align: center;
+  color: #050505;
+  margin-top: 2em;
+  margin-bottom: 1em;
+}
+  .tl-page-footer .tl-social-wrap {
+    margin-top: 0.5em;
+  }

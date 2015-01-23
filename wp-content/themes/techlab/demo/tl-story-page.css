@@ -1,0 +1,64 @@
+.tl-page-content.tl-story-page {
+  padding: 1em 3em;
+}
+
+  .tl-page-content.tl-story-page .tl-arrow-linker {
+    display: block;
+    background: none;
+    padding: 0;
+    width: 4em;
+    margin: 1em 0;
+
+    /*width: 4em;
+    margin: 3em 0;*/
+  }
+    .tl-page-content.tl-story-page .tl-arrow-linker::after {
+      display: none;
+    }
+    .tl-page-content.tl-story-page .tl-arrow-linker svg {
+      fill: white;
+      width: 4em;
+      height: 4em;
+    }
+    .tl-page-content.tl-story-page .tl-arrow-linker svg:hover,
+    .tl-page-content.tl-story-page .tl-arrow-linker svg:active {
+      fill: rgba(255,255,255,.75);
+    }
+
+    .tl-page-content.tl-story-page .tl-content-wrap .tl-title {
+      font-family: "Gotham Bold";
+    }
+
+    .tl-page-content.tl-story-page .tl-content-wrap .tl-content {
+      font-family: "Gotham Book";
+      font-size: 1.3em;
+      line-height: 1.5em;
+    }
+
+      .tl-page-content.tl-story-page .tl-content-wrap .tl-content p {
+        margin-bottom: 1.5em;
+      }
+
+
+/* small devices *-sm-* */
+@media (min-width: 768px) {
+
+  .tl-page-content.tl-story-page .tl-arrow-linker {
+    margin: 2em 0;
+    padding-left: 2em;
+  }
+
+  .tl-page-content.tl-story-page .tl-content-wrap {
+    padding: 0 10em;
+  }
+
+  .tl-page-content.tl-story-page .tl-content-wrap .tl-title {
+    font-size: 3em;
+  }
+
+  .tl-page-content.tl-story-page .tl-content-wrap .tl-content {
+    font-size: 1.1em;
+    line-height: 1.3em;
+  }
+
+}
