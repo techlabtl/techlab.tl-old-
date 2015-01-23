@@ -5,7 +5,9 @@
  */
 
 if (!class_exists("Wordless")) {
-  echo "This theme requires the <a href='https://github.com/welaika/wordless'>Wordless plugin</a> in order to work. Please, install it now!";
+  echo "This theme requires the
+  <a href='https://github.com/welaika/wordless'>Wordless plugin</a>
+  in order to work. Please, install it now!";
   die();
 }
 
@@ -18,14 +20,13 @@ if (!class_exists("Wordless")) {
  * To specify a layout other than the default one, please pass it as
  * the second parameter to the `render_view()` method.
  *
- * For a list of conditional tags, please see here: http://codex.wordpress.org/Conditional_Tags
+ * For a list of conditional tags, please see here:
+ * http://codex.wordpress.org/Conditional_Tags
  */
-
-global $post;
 
 if (is_front_page()) {
   render_view("pages/home");
-} else if (is_page($post->ID)) {
+} else if (is_page()) {
   render_view("pages/single");
 } else if (is_single()) {
   render_view("posts/single");
