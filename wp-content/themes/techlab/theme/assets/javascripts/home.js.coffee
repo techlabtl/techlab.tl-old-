@@ -27,12 +27,12 @@ jQuery ($) ->
 
       return
     $this = $(this)
-    return  if $this.hasClass("tl-jumbo-right-faq-answer") or $this.hasClass("tl-jumbo-right-faq-ask-form")
-    target = $this.attr("data-target")
-    $target = $("body").find("#" + target)
-    unless $target.hasClass("faq-open")
+    return if $this.hasClass("tl-jumbo-right-faq-answer") or $this.hasClass("tl-jumbo-right-faq-ask-form")
+    target = $this.data("target")
+    $target = $("#" + target)
+    if $target.hasClass("faq-open")
       closeAll()
-      open $target
     else
       closeAll()
+      open $target
     return
