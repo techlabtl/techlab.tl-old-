@@ -1,27 +1,21 @@
 .tl-jumbo-right.col-xs-12.col-sm-6
   .row.tl-jumbo-right-faq-wrap
-    .tl-jumbo-right-faq.tl-jumbo-right-faq-ask.col-xs-10.col-xs-offset-1{:data => {:target => 'faq-0'}}
+    .tl-jumbo-right-faq.tl-jumbo-right-faq-ask.col-xs-10.col-xs-offset-1(data-target="faq-0")
       Fai una domanda
   .row.tl-jumbo-right-faq-wrap.faq-collapsed#faq-0
     .tl-jumbo-right-faq.tl-jumbo-right-faq-ask-form.col-xs-10.col-xs-offset-1
       %textarea{:placeholder => "La domanda", :rows => "5"}
       %input{:placeholder => "Inserisci la tua mail se vuoi essere ricontattato", :type => "email"}/
       %button{:type => "submit"} Invia
-  .row.tl-jumbo-right-faq-wrap
-    .tl-jumbo-right-faq.col-xs-10.col-xs-offset-1.col-sm-8.col-sm-offset-3{:data => {:target => 'faq-1'}
-      Siete un fablab ?
-  .row.tl-jumbo-right-faq-wrap.faq-collapsed#faq-1
-    .tl-jumbo-right-faq.tl-jumbo-right-faq-answer.col-xs-6.col-xs-offset-5.col-sm-6.col-sm-offset-5
-      NO.
-  .row.tl-jumbo-right-faq-wrap
-    .tl-jumbo-right-faq.col-xs-10.col-xs-offset-1.col-sm-8.col-sm-offset-3{:data => {:target => 'faq-2'}
-      Come funziona per la laser ?
-  .row.tl-jumbo-right-faq-wrap.faq-collapsed#faq-2
-    .tl-jumbo-right-faq.tl-jumbo-right-faq-answer.col-xs-6.col-xs-offset-5.col-sm-6.col-sm-offset-5
-      Vieni qui e scoprilo.
-  .row.tl-jumbo-right-faq-wrap
-    .tl-jumbo-right-faq.col-xs-10.col-xs-offset-1.col-sm-8.col-sm-offset-3{:data => {:target => 'faq-3'}
-      Mi costruite un mobiletto di legno ?
-  .row.tl-jumbo-right-faq-wrap.faq-collapsed#faq-3
-    .tl-jumbo-right-faq.tl-jumbo-right-faq-answer.col-xs-6.col-xs-offset-5.col-sm-6.col-sm-offset-5
-      Solo per 10000 bilioni di €.
+
+  - $query = new WP_Query('post_type=faq')
+  - $i = 0
+  - while ( $query->have_posts() )
+    - $i++
+    - $query->the_post()
+    .row.tl-jumbo-right-faq-wrap
+      .tl-jumbo-right-faq.col-xs-10.col-xs-offset-1.col-sm-8.col-sm-offset-3(data-target="faq-#{$i}")
+        = the_title()
+    .row.tl-jumbo-right-faq-wrap.faq-collapsed#faq-#{$i}
+      .tl-jumbo-right-faq.tl-jumbo-right-faq-answer.col-xs-6.col-xs-offset-5.col-sm-6.col-sm-offset-5
+        = the_content()
