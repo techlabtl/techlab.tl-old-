@@ -1,5 +1,10 @@
 .tl-page-content.tl-story-page
   padding: 1em 3em
+  .tl-linker-spacer
+    /* just add space in place for .tl-arrow-linker */
+    margin: 1em 0
+    height: 4em
+
   .tl-arrow-linker
     display: block
     background: none
@@ -7,7 +12,7 @@
     width: 4em
     margin: 1em 0
     /*width: 4em;
-     *margin: 3em 0;
+     *margin: 3em 0;*/
     &::after
       display: none
     svg
@@ -26,9 +31,11 @@
       p
         margin-bottom: 1.5em
 
-/* small devices *-sm-*
+/* small devices *-sm-*/
 @media (min-width: 768px)
   .tl-page-content.tl-story-page
+    .tl-linker-spacer
+      margin: 2em 0
     .tl-arrow-linker
       margin: 2em 0
       padding-left: 2em

@@ -2,9 +2,12 @@
   - the_post()
 
   - $previous = previous_page_not_post()
-  %a.tl-arrow-linker{:href => "#{$previous['link']}"}
-    %img.svg{:alt => "", :src => "<?php echo asset_url('images'); ?>/arrow-prev.svg"}/
-    = $previous['text']
+  - if ($previous)
+    %a.tl-arrow-linker{:href => "#{$previous['link']}"}
+      %img.svg{:alt => "", :src => "<?php echo asset_url('images'); ?>/arrow-prev.svg"}/
+      / = $previous['text']
+  - else
+    .tl-linker-spacer
 
 
   .tl-content-wrap
@@ -12,6 +15,7 @@
     .tl-content= the_content()
 
   - $next = next_page_not_post()
-  %a.tl-arrow-linker{:href => "#{$next['link']}"}
-    %img.svg{:alt => "", :src => "<?php echo asset_url('images'); ?>/arrow-next.svg"}/
-    = $next['text']
+  - if ($next)
+    %a.tl-arrow-linker{:href => "#{$next['link']}"}
+      %img.svg{:alt => "", :src => "<?php echo asset_url('images'); ?>/arrow-next.svg"}/
+      / = $next['text']
