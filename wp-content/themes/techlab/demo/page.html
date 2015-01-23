@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Techlab</title>
+
+    <link rel="stylesheet" href="../assets/stylesheets/bootstrap.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="../assets/stylesheets/bootstrap-theme.css" media="screen" title="no title" charset="utf-8">
+
+    <link rel="stylesheet" href="../assets/stylesheets/font-awesome.css">
+
+    <link rel="stylesheet" href="../assets/fonts/style.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="style.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="social-icons.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="tl-page-header.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="tl-page-footer.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="tl-story-page.css" media="screen" title="no title" charset="utf-8">
+
+    <script src="../assets/javascripts/modernizr.js"></script>
+  </head>
+  <body>
+    <!-- <h1>Hello World!</h1> -->
+    <div class="container-fluid">
+
+      <header class="tl-page-header">
+        <a class="tl-block-link" href="">
+          <div class="row">
+            <div class="col-xs-12">
+              <img class="tl-page-logo" src="../assets/images/logo.svg" alt="Techlab logo">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12 tl-page-brand">
+              Associazione Techlab
+            </div>
+          </div>
+        </a>
+      </header>
+
+      <section class="tl-page-content tl-story-page">
+        <a class="tl-arrow-linker" href="#">
+          <img class="svg" src="../assets/images/arrow-prev.svg" alt="">
+        </a>
+
+        <div class="tl-content-wrap">
+
+          <h1 class="tl-title">UN TECHLAB, AMICO MIO</h1>
+
+          <div class="tl-content">
+            <p>
+              Al Techlab troverai persone appassionate di scienza e tecnologia che amano pasticciare con cavi,
+              resistenze e transistori immerse nell’odore del legno tagliato dal laser o della plastica fusa da una stampante 3d.
+            </p>
+            <p>
+              Se anche <a href="#">a te piace sporcarti</a> le mani ed usare il cervello, se hai lo spirito di Doc Brown e
+              l’intraprendenza di John Tesla, il Techlab è il posto giusto per te!
+            </p>
+
+            <p>
+              Che tu voglia progettare una macchina del tempo o un mobiletto per la tua camera da letto al Techlab
+              troverai i mezzi ed i pezzi per realizzare le tue idee: potrai segarle, assemblarle ed inchiodarle oppure
+              tagliarle con il laser o stamparle in 3d. Al Techlab vedrai la tua idea prendere forma tra le mani ed in
+              qualunque momento potrai decidere di smontarla, modificarla, rimontarla e quando sarai soddisfatto ti
+              metteremo in contatto con falegnami, stampatori e programmatori per produrla nel numero e nelle di-
+              mensioni che tu vorrai.
+            </p>
+          </div>
+
+        </div>
+
+        <a class="tl-arrow-linker" href="#">
+          <img class="svg" src="../assets/images/arrow-next.svg" alt="">
+        </a>
+      </section>
+
+      <footer class="tl-page-footer">
+        <div class="row">
+          <div class="col-xs-6 col-xs-offset-3">
+            Via Vittorio Emanuele II, 1 <br>
+            10023 Chieri, TO <br>
+            c.f. 94072040010
+          </div>
+        </div>
+        <div class="row">
+          <div class="tl-social-wrap social-icons">
+            <ul>
+              <li><a href="https://twitter.com"><i class="fa fa-twitter"></i></a></li>
+              <li><a href="https://facebook.com"><i class="fa fa-facebook"></i></a></li>
+              <li><a href="https://behance.net"><i class="fa fa-behance"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+
+    </div>
+
+    <script src="jquery-1.11.2.js"></script>
+    <script src="../assets/javascripts/bootstrap.js"></script>
+    <script src="svg-inliner.js"></script>
+    <script>
+      $(document).ready(function() {
+        $('.equalHeight').each(function() {
+          // should be responsive!!!! Modernizr!!!
+          if (Modernizr.mq('only screen and (min-width: 768px)')) {
+            var eHeight = $(this).innerHeight();
+            $(this).children('div').css('min-height', eHeight);
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
