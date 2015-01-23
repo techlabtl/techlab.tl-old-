@@ -7,10 +7,14 @@
 
 / Stylesheets
 / screen.css is loaded by default with wp_head() function. See config/initializers/default_hooks.php for details
+= stylesheet_link_tag("bootstrap.css")
+= stylesheet_link_tag("bootstrap-theme.css")
+= stylesheet_link_tag("font-awesome.css")
+
+= javascript_include_tag("modernizr.js")
 
 / HTML5 Shiv
 /[if lt IE 9]
   = javascript_include_tag("http://html5shiv.googlecode.com/svn/trunk/html5.js")
 
 - wp_head()
-

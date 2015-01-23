@@ -1,9 +1,8 @@
 <?php
 require_once '/home/endorama/code/github/techlabtl/techlab.tl/wp-content/plugins/wordless/vendor/phamlp/haml/HamlHelpers.php';
-?><h1>
-  <?php echo link_to(get_bloginfo('name'), get_bloginfo('url')); ?>
-
-</h1><h2>
-  <?php echo get_bloginfo('description'); ?>
-
-</h2>
+?><div class="row">
+<div class="col-xs-12">
+<img alt="Techlab logo" class="tl-page-logo" src="/wp-content/themes/techlab/assets/images/logo.svg" /></div></div><div class="row">
+<div class="col-xs-12 tl-page-brand">
+  Associazione Techlab
+</div></div>

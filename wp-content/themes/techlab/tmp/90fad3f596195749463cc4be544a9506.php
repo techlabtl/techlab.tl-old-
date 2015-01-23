@@ -6,15 +6,21 @@ require_once '/home/endorama/code/github/techlabtl/techlab.tl/wp-content/plugins
   <?php echo render_partial("layouts/head"); ?>
 
 </head><body>
-<div class="page-wrapper">
-<header class="site-header">
+<div class="container-fluid">
+<header class="tl-page-header">
   <?php echo render_partial("layouts/header"); ?>
 
-</header><section class="site-content">
-  <?php echo wl_yield(); ?>
+</header>  <?php echo wl_yield(); ?>
 
-</section><footer class="site-footer">
+<footer class="tl-page-footer">
   <?php echo render_partial("layouts/footer"); ?>
 
 </footer></div>  <?php wp_footer(); ?>
+  <?php echo javascript_include_tag("bootstrap"); ?>
+
+  <?php if (is_front_page()) { ?>
+
+  <?php echo javascript_include_tag("home"); ?>
+
+<?php } ?>
 </body></html>
