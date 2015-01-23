@@ -1,9 +1,15 @@
-- the_post()
+%section.tl-page-content.tl-story-page
+  - the_post()
 
-= previous_page_not_post()
+  / = previous_page_not_post()
+  %a.tl-arrow-linker{:href => "#"}
+    %img.svg{:alt => "", :src => "<?php echo asset_url('images'); ?>/arrow-prev.svg"}/
 
-= the_title()
+  
+  .tl-content-wrap
+    %h1.tl-title= the_title()
+    .tl-content= the_content()
 
-= the_content()
-
-= next_page_not_post()
+  / = next_page_not_post()
+  %a.tl-arrow-linker{:href => "#"}
+    %img.svg{:alt => "", :src => "<?php echo asset_url('images'); ?>/arrow-next.svg"}/
