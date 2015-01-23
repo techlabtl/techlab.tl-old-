@@ -1,15 +1,17 @@
 %section.tl-page-content.tl-story-page
   - the_post()
 
-  / = previous_page_not_post()
-  %a.tl-arrow-linker{:href => "#"}
+  - $previous = previous_page_not_post()
+  %a.tl-arrow-linker{:href => "#{$previous['link']}"}
     %img.svg{:alt => "", :src => "<?php echo asset_url('images'); ?>/arrow-prev.svg"}/
+    = $previous['text']
 
-  
+
   .tl-content-wrap
     %h1.tl-title= the_title()
     .tl-content= the_content()
 
-  / = next_page_not_post()
-  %a.tl-arrow-linker{:href => "#"}
+  - $next = next_page_not_post()
+  %a.tl-arrow-linker{:href => "#{$next['link']}"}
     %img.svg{:alt => "", :src => "<?php echo asset_url('images'); ?>/arrow-next.svg"}/
+    = $next['text']
