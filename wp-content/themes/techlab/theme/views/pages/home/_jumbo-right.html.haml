@@ -1,12 +1,16 @@
 .tl-jumbo-right.col-xs-12.col-sm-6
+
+  - $fields = ninja_form_header(2)
   .row.tl-jumbo-right-faq-wrap
     .tl-jumbo-right-faq.tl-jumbo-right-faq-ask.col-xs-10.col-xs-offset-1(data-target="faq-0")
       Fai una domanda
   .row.tl-jumbo-right-faq-wrap.faq-collapsed#faq-0
     .tl-jumbo-right-faq.tl-jumbo-right-faq-ask-form.col-xs-10.col-xs-offset-1
-      %textarea{:placeholder => "La domanda", :rows => "5"}
+      - ninja_form_field($fields[0], 2)
       %input{:placeholder => "Inserisci la tua mail se vuoi essere ricontattato", :type => "email"}/
-      %button{:type => "submit"} Invia
+      - ninja_form_field($fields[1], 2)
+
+  - ninja_form_footer(2)
 
   - $query = new WP_Query('post_type=faq&order=ASC&orderby=title')
   - $i = 0
