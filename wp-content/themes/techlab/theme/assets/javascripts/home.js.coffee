@@ -43,5 +43,5 @@ jQuery ($) ->
   # Hide labels and display placeholder for ninja form fields
   $('#ninja_forms_field_8').attr('placeholder', $('#ninja_forms_field_8').val())
   $('#ninja_forms_field_8').val('')
-  $('#ninja_forms_field_11').attr('placeholder', $('#ninja_forms_field_11').val())
-  $('#ninja_forms_field_11').val('')
+  $('#ninja_forms_field_9').attr('placeholder', $('#ninja_forms_field_9').val())
+  $('#ninja_forms_field_9').val('')
