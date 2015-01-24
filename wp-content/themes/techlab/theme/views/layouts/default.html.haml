@@ -4,7 +4,8 @@
   %body
     %div.container-fluid
 
-      %header.tl-page-header= render_partial("layouts/header")
+      %a.tl-block-link{:href => "#{get_site_url()}"}
+        %header.tl-page-header= render_partial("layouts/header")
       = wl_yield()
       %footer.tl-page-footer= render_partial("layouts/footer")
 
