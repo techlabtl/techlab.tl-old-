@@ -19,3 +19,7 @@
     %a.tl-arrow-linker.tl-linker-next{:href => "#{$next['link']}"}
       %img.svg{:alt => "", :src => "<?php echo asset_url('images'); ?>/arrow-next.svg"}/
       %span= $next['text']
+  - else
+    %a.tl-arrow-linker.tl-linker-next{:href => "#{get_site_url()}"}
+      %img.svg{:alt => "", :src => "#{asset_url('images')}/arrow-next.svg"}/
+      %span Home
