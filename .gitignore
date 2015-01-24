@@ -14,3 +14,4 @@ wp-content/wp-cache-config.php
 .sass-cache
 *.sql
 wp-content/themes/techlab/tmp/*
+Movefile
