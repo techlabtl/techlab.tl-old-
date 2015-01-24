@@ -9,6 +9,9 @@ jQuery ($) ->
 
   $(".tl-jumbo-right-faq").on "click", ->
     close = (elem) ->
+      # there is no other way so we close ninja form success message here
+      if ($('#ninja_forms_form_2_response_msg').hasClass('ninja-forms-success-msg'))
+        $('#ninja_forms_form_2_response_msg').fadeOut(300)
       $(elem).slideUp 400, ->
         $(this).removeClass "faq-open"
         return
@@ -36,3 +39,9 @@ jQuery ($) ->
       closeAll()
       open $target
     return
+
+  # Hide labels and display placeholder for ninja form fields
+  $('#ninja_forms_field_8').attr('placeholder', $('#ninja_forms_field_8').val())
+  $('#ninja_forms_field_8').val('')
+  $('#ninja_forms_field_11').attr('placeholder', $('#ninja_forms_field_11').val())
+  $('#ninja_forms_field_11').val('')
