@@ -8,7 +8,7 @@
       %input{:placeholder => "Inserisci la tua mail se vuoi essere ricontattato", :type => "email"}/
       %button{:type => "submit"} Invia
 
-  - $query = new WP_Query('post_type=faq')
+  - $query = new WP_Query('post_type=faq&order=ASC&orderby=title')
   - $i = 0
   - while ( $query->have_posts() )
     - $i++
