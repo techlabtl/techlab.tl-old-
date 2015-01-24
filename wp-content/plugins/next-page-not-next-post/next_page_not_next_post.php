@@ -17,7 +17,7 @@ include('shortcodes.php');
 function next_page_not_post($anchor='',$loop=NULL, $getPagesQuery='sort_column=menu_order&sort_order=asc') {
 	global $post;
 
-	$output = [];
+	$output = array();
 
 	$getPages = '';
 
@@ -107,7 +107,7 @@ function next_page_not_post($anchor='',$loop=NULL, $getPagesQuery='sort_column=m
 function previous_page_not_post($anchor='',$loop=NULL, $getPagesQuery='sort_column=menu_order&sort_order=asc') {
 	global $post;
 
-	$output = [];
+	$output = array();
 
 	$getPages = '';
 
