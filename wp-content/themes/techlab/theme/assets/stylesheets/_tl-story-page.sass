@@ -21,19 +21,12 @@
       height: 4em
       &:hover, &:active
         fill: rgba(255, 255, 255, 0.75)
-    &.tl-linker-prev
-      span
-        font-size: 1.5em
-        left: 5em
-        line-height: 2.5em
-        position: absolute
-        top: 0
-        width: 15em
+    &.tl-linker-prev,
     &.tl-linker-next
       span
-        font-size: 1.5em
-        left: 5em
-        line-height: 2.5em
+        font-size: 1.2em
+        left: 4em
+        line-height: 3.5em
         position: absolute
         top: 0
         width: 15em
@@ -56,6 +49,12 @@
     .tl-arrow-linker
       margin: 2em 0
       padding-left: 2em
+      &.tl-linker-prev,
+      &.tl-linker-next
+        span
+          left: 5em
+          font-size: 1.5em
+          line-height: 2.5em
     .tl-content-wrap
       padding: 0 10em
       .tl-title
