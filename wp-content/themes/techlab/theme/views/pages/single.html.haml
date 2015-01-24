@@ -4,7 +4,7 @@
   - $previous = previous_page_not_post()
   - if ($previous)
     %a.tl-arrow-linker.tl-linker-prev{:href => "#{$previous['link']}"}
-      %img.svg{:alt => "", :src => "<?php echo asset_url('images'); ?>/arrow-prev.svg"}/
+      %img.svg{:alt => "", :src => "#{asset_url('images')}/arrow-prev.svg"}/
       %span= $previous['text']
   - else
     .tl-linker-spacer
@@ -17,7 +17,7 @@
   - $next = next_page_not_post()
   - if ($next)
     %a.tl-arrow-linker.tl-linker-next{:href => "#{$next['link']}"}
-      %img.svg{:alt => "", :src => "<?php echo asset_url('images'); ?>/arrow-next.svg"}/
+      %img.svg{:alt => "", :src => "#{asset_url('images')}/arrow-next.svg"}/
       %span= $next['text']
   - else
     %a.tl-arrow-linker.tl-linker-next{:href => "#{get_site_url()}"}
