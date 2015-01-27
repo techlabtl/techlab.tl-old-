@@ -7,8 +7,9 @@
       %img.svg{:alt => "", :src => "#{asset_url('images')}/arrow-prev.svg"}/
       %span= $previous['text']
   - else
-    .tl-linker-spacer
-
+    %a.tl-arrow-linker.tl-linker-prev{:href => "#{get_site_url()}"}
+      %img.svg{:alt => "", :src => "#{asset_url('images')}/arrow-prev.svg"}/
+      %span Home
 
   .tl-content-wrap
     %h1.tl-title= the_title()
